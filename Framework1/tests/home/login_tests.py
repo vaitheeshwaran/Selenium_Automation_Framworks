@@ -3,7 +3,7 @@ from pages.home.login_page import LoginPage
 import unittest
 import pytest
 
-@pytest.mark.usefixtures("oneTimeSetUp")
+@pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 class LoginTests(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
