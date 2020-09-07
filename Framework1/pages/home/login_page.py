@@ -30,10 +30,8 @@ class LoginPage(SeleniumDriver):
 
     def login(self, email="", password=""):
         self.clickLoginLink()
-	self.clearFields()
         self.enterEmail(email)
         self.enterPassword(password)
-	time.sleep(3)
         self.clickLoginButton()
 
     def verifyLoginSuccessful(self):
@@ -46,9 +44,4 @@ class LoginPage(SeleniumDriver):
                                        locatorType="xpath")
         return result
 
-    def clearFields(self):
-        emailField = self.getElement(locator=self._email_field)
-        emailField.clear()
-        passwordField = self.getElement(locator=self._password_field)
-        passwordField.clear()
 
