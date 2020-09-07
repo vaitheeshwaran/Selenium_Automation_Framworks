@@ -21,3 +21,4 @@ class LoginTests(unittest.TestCase):
             print("Login Successful")
         else:
             print("Login Failed")
+        driver.quit()
